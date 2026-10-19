@@ -1,0 +1,14 @@
+# Runtime credentials and local environment overrides
+.codex/
+.env
+.env.*
+auth.json
+*.pem
+*.key
+
+# Notebook/chat sessions and server logs belong in your notebook projects
+.ipynb_checkpoints/
+*.ipynb
+*.chat
+*.log
+.DS_Store

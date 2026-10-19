@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+
+exec docker run --rm -it \
+  -p 127.0.0.1:8888:8888 \
+  -v "$PWD:/home/jovyan/work" \
+  --mount type=volume,source=jupyter-ai-codex,target=/home/jovyan/.codex \
+  -w /home/jovyan/work \
+  jupyter-ai:local "$@"
